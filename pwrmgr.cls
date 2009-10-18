@@ -1,5 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{pwrmgr}[2009/09/21 Klasa dla prac magisterskich]
+% Check README for license information
 
 \newif\ifpwr@pdf
 \ifx\pdfoutput\undefined\else
@@ -53,7 +54,12 @@
 \newenvironment{figurehere}{\begin{center}\def\@captype{figure}}{\end{center}}
 \newenvironment{tablehere}{\begin{center}\def\@captype{table}}{\end{center}}
 
-% strona tytułowa porzyczona z pakietu pwrdtyt.sty
+% title page itself comes from pwrdtyt.sty package dated 2005/06/13 v0.03
+% create by Wojciech Myszka <wojciech.myszka@pwr.wroc.pl>
+% and dristributed under LaTeX Project Public License version 1.2 or later
+%
+% You can get it at:
+% http://www.immt.pwr.wroc.pl/index.php?option=com_docman&task=docclick&Itemid=137&bid=74&limitstart=0&limit=5
 
 \RequirePackage[absolute]{textpos}
 
