@@ -1,14 +1,15 @@
 Na stronie tej znajduje się nieoficjalna klasa dokumentów LaTeXa do składu prac
-magisterskich na Politechnice Wrocławskiej.
+magisterskich na Politechnice Wrocławskiej, zgodna z logotypem:
+http://logotyp.pwr.wroc.pl/wzory.php?co=pracadypl
 
-Klasa rozwija i wykorzystuje fragmenty pakietu pwrdtyt.sty autorstwa Wojciecha
-Myszki do składu strony tytułowej prac magisterskich na tej samej uczelni:
+Klasa rozwija i wykorzystuje fragmenty pakietu pwrdtyt.sty autorstwa Wojciecha Myszki, 
+przeznaczonej do składu strony tytułowej prac magisterskich na Politechnice Wrocławskiej:
 http://www.immt.pwr.wroc.pl/index.php?option=com_docman&task=docclick&Itemid=137&bid=74&limitstart=0&limit=5
 
 Dalsze informacje można znaleźć na stronie domowej projektu:
 http://www.im.pwr.wroc.pl/~giniew/doku.php?id=pwrmgr
 
 Klasa opublikowana jest na licencji
-Creative Commons Attribution-Share Alike 3.0 Unported
-( http://creativecommons.org/licenses/by-sa/3.0/ )
+Creative Commons Attribution-Share Alike 3.0 Unported:
+http://creativecommons.org/licenses/by-sa/3.0/
 
