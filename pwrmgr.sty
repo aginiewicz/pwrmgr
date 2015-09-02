@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{pwrmgr}[2009/09/21 Klasa dla prac magisterskich]
+\ProvidesClass{pwrmgr}[2015/09/02 Pakiet do prac magisterskich]
 % Check README for license information
 
 \newif\ifpwr@pdf
@@ -14,19 +14,23 @@
 \ClassError{pwrmgr}{!!! Please use ONLY pdfLaTeX !!!}
 \fi
 
-\LoadClass[12pt]{mwbk}
 \RequirePackage{lmodern}
+\RequirePackage[tbtags]{amsmath}
+\RequirePackage{amsthm,amsfonts}
+\RequirePackage{mathbbol}
+
+\RequirePackage[polish]{babel}
 \RequirePackage[T1,plmath]{polski}
+\RequirePackage{csquotes}
+\DeclareQuoteStyle[quotes]{polish}{\quotedblbase}{\textquotedblright}[0.05em]{\guillemotleft}{\guillemotright}
+\DeclareQuoteAlias[quotes]{polish}{polish}
+\RequirePackage[backend=biber,style=numeric-comp,sortlocale=pl_PL]{biblatex}
+\RequirePackage{makeidx}\makeindex
+
 \RequirePackage[expansion,protrusion,kerning,spacing,tracking]{microtype}
 \g@addto@macro\verbatim{\microtypesetup{activate=false}}
 
 \RequirePackage{graphicx}
-\RequirePackage{makeidx}\makeindex
-\bibliographystyle{plplain}
-
-\RequirePackage[tbtags]{amsmath}
-\RequirePackage{amsthm,amsfonts}
-\RequirePackage{mathbbol}
 
 \RequirePackage{listings}
 \let\@oldchap\chapter@toc
@@ -77,8 +81,7 @@
 \def\@kluczowe{\@latex@error{No \noexpand\kluczowe given}\@ehc}
 \def\streszczenie#1{\gdef\@streszczenie{#1}}
 \def\@streszczenie{\@latex@error{No \noexpand\streszczenie given}\@ehc}
-\def\bibliografia#1{\IfFileExists{#1.bib}{\gdef\@bibliografia{#1}}{\@latex@error{#1.bib: No such file or directory}\@ehg}}
-\def\@bibliografia{\@latex@error{No \noexpand\bibliografia given}\@ehc}
+\def\bibliografia#1{\IfFileExists{#1.bib}{\addbibresource{#1.bib}}{\@latex@error{#1.bib: No such file or directory}\@ehg}}
 \def\wciecia#1{\gdef\@wciecia{#1}}
 \def\@wciecia{2}
 
@@ -215,7 +218,7 @@
 \backmatter
 \fi
 \prefixing
-\ifpwr@bib\bibliography{\@bibliografia}\fi
+\ifpwr@bib\printbibliography\fi
 \ifpwr@ind\printindex\fi
 }
 
